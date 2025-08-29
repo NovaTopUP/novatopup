@@ -1,0 +1,180 @@
+/* NovaTopUp — Tailwind-like utility subset + custom theme
+   Designed to work offline. Only the utilities used in this project are included. */
+
+/* CSS Reset (modern normalize-lite) */
+*,*::before,*::after{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;line-height:1.5;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;background:#0b1020;color:#e6e9ef}
+img,svg{display:block;max-width:100%}
+input,button,select,textarea{font:inherit;color:inherit}
+a{text-decoration:none;color:inherit}
+
+/* Theme */
+:root{
+  --bg: #0b1020;
+  --card:#131a2e;
+  --muted:#9aa4b2;
+  --ring:#7c8cf8;
+  --grad-1:#6366f1;
+  --grad-2:#a855f7;
+  --success:#10b981;
+  --danger:#ef4444;
+  --warning:#f59e0b;
+}
+.bg-surface{background:radial-gradient(1200px 600px at 80% -20%, #1d2544 0%, transparent 55%), var(--bg);}
+
+/* Typography */
+.text-gradient{background:linear-gradient(90deg,var(--grad-1),var(--grad-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.footer-title{font-weight:700;margin-bottom:.5rem}
+.footer-link{color:#b8c0cc}
+.footer-link:hover{color:#fff}
+
+/* Layout helpers */
+.container{max-width:1100px}
+.mx-auto{margin-left:auto;margin-right:auto}
+.px-4{padding-left:1rem;padding-right:1rem}
+.py-4{padding-top:1rem;padding-bottom:1rem}
+.py-8{padding-top:2rem;padding-bottom:2rem}
+.pb-8{padding-bottom:2rem}
+.mt-4{margin-top:1rem}
+.mt-6{margin-top:1.5rem}
+.mt-8{margin-top:2rem}
+.mt-16{margin-top:4rem}
+.mb-2{margin-bottom:.5rem}
+.mb-3{margin-bottom:.75rem}
+.mb-4{margin-bottom:1rem}
+.mb-6{margin-bottom:1.5rem}
+.mb-8{margin-bottom:2rem}
+.space-y-2>*+*{margin-top:.5rem}
+.grid{display:grid}
+.flex{display:flex}
+.items-center{align-items:center}
+.justify-between{justify-content:space-between}
+.gap-2{gap:.5rem}
+.gap-3{gap:.75rem}
+.gap-4{gap:1rem}
+.gap-6{gap:1.5rem}
+.gap-8{gap:2rem}
+
+/* Borders & radius */
+.border-b{border-bottom:1px solid rgba(255,255,255,.08)}
+.border-t{border-top:1px solid rgba(255,255,255,.08)}
+.border{border:1px solid rgba(255,255,255,.08)}
+.rounded-xl{border-radius:1rem}
+.rounded-2xl{border-radius:1.25rem}
+.rounded-full{border-radius:999px}
+
+/* Colors */
+.bg-card{background:var(--card)}
+.bg-muted{background:#0f1527}
+.bg-indigo{background:#4f46e5}
+.text-slate-100{color:#e6e9ef}
+.text-slate-300{color:#c9d1dd}
+.text-slate-400{color:#b0bbcb}
+.text-slate-500{color:#92a0b3}
+.text-white{color:#fff}
+.text-green{color:var(--success)}
+.text-red{color:var(--danger)}
+
+/* Shadows */
+.shadow, .shadow-md{box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.shadow-lg{box-shadow:0 16px 40px rgba(0,0,0,.35)}
+.shadow-xl{box-shadow:0 20px 60px rgba(0,0,0,.4)}
+
+/* Effects */
+.backdrop-blur{backdrop-filter:blur(10px)}
+.drop-shadow{filter:drop-shadow(0 4px 12px rgba(0,0,0,.35))}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:.75rem 1rem;border-radius:1rem;border:1px solid rgba(255,255,255,.06);background:linear-gradient(90deg,var(--grad-1),var(--grad-2));color:white;font-weight:700;transition:.2s transform,.2s opacity}
+.btn:hover{opacity:.95;transform:translateY(-1px)}
+.btn-ghost{background:transparent;border-color:rgba(255,255,255,.14)}
+.btn-ghost:hover{background:rgba(255,255,255,.06)}
+.btn-muted{background:#222a44}
+.btn-muted:hover{background:#2a3354}
+
+/* Forms */
+.input, .select{width:100%;padding:.75rem 1rem;border:1px solid rgba(255,255,255,.08);border-radius:1rem;background:#0f1527;color:#e6e9ef;outline:none;transition:border .15s}
+.input:focus, .select:focus{border-color:var(--ring);box-shadow:0 0 0 4px rgba(124,140,248,.2)}
+.label{font-size:.9rem;color:#c9d1dd;margin-bottom:.35rem;display:inline-block}
+
+/* Cards */
+.card{background:linear-gradient(180deg,rgba(255,255,255,.03),transparent),var(--card);border:1px solid rgba(255,255,255,.08);border-radius:1.25rem;padding:1.25rem}
+.card-hover{transition:transform .2s, box-shadow .2s}
+.card-hover:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(0,0,0,.35)}
+
+/* Nav */
+.nav-link{color:#c9d1dd}
+.nav-link:hover{color:#fff}
+
+/* Helpers */
+.hidden{display:none}
+.block{display:block}
+.w-full{width:100%}
+.h-9{height:2.25rem}
+.h-12{height:3rem}
+.min-h-screen{min-height:100vh}
+.text-center{text-align:center}
+.text-xs{font-size:.75rem}
+.text-sm{font-size:.875rem}
+.text-lg{font-size:1.125rem}
+.text-xl{font-size:1.25rem}
+.text-2xl{font-size:1.5rem}
+.text-3xl{font-size:1.875rem}
+.text-4xl{font-size:2.25rem}
+.font-bold{font-weight:700}
+.font-extrabold{font-weight:800}
+.tracking-tight{letter-spacing:-.02em}
+.fixed{position:fixed}
+.sticky{position:sticky}
+.top-0{top:0}
+.right-4{right:1rem}
+.bottom-4{bottom:1rem}
+.z-40{z-index:40}
+.z-50{z-index:50}
+
+/* Grids */
+.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}
+.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.gap-5{gap:1.25rem}
+
+/* Responsive */
+@media (min-width: 768px){
+  .md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .md\:flex{display:flex}
+}
+@media (min-width: 1024px){
+  .lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+
+/* Gradients */
+.bg-gradient-to-r{background-image:linear-gradient(90deg,var(--grad-1),var(--grad-2))}
+.from-indigo-500{--grad-1:#6366f1}
+.to-violet-500{--grad-2:#a855f7}
+
+/* Rings */
+.focus\:ring-4:focus{box-shadow:0 0 0 4px rgba(124,140,248,.25)}
+
+/* Tables */
+.table{width:100%;border-collapse:separate;border-spacing:0 .5rem}
+.table thead th{font-weight:700;text-align:left;color:#cfd6e2;padding:.75rem 1rem}
+.table tbody td{padding:.9rem 1rem;background:#0f1527;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.table tbody tr{border-radius:1rem}
+.badge{padding:.25rem .6rem;border-radius:.75rem;background:#243055;color:#cfd6e2;font-size:.8rem}
+
+/* Spinner */
+.spinner{width:56px;height:56px;border:6px solid rgba(255,255,255,.15);border-top-color:#fff;border-radius:50%;animation:spin 1s linear infinite;margin:0 auto}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Utility extras */
+.opacity-90{opacity:.9}
+.transition{transition:.2s all}
+.ring-indigo-400\/40{box-shadow:0 0 0 4px rgba(129,140,248,.4)}
+.hover\:opacity-90:hover{opacity:.9}
+
+/* Game card image */
+.game-thumb{border-radius:1rem;aspect-ratio:1/1;object-fit:cover}
+.game-card-title{font-weight:700;margin-top:.65rem}
+.price{color:#9fe3ff}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NovaTopUp — Professional Recharge</title>
+  <meta name="description" content="NovaTopUp — Fast, secure game top-ups in SGD.">
+  <link rel="icon" href="images/codashop-logo-new-3a.png">
+  <link rel="preload" href="style.css" as="style">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen bg-surface text-slate-100">
+  <!-- Floating Help -->
+  <button id="helpBtn" class="fixed right-4 bottom-4 z-50 rounded-full shadow-xl px-5 py-3 bg-gradient-to-r from-indigo-500 to-violet-500 hover:opacity-90 transition focus:ring-4 ring-indigo-400/40">
+    Support / Help
+  </button>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-slate-900/70 border-b border-white/10">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="images/codashop-logo-new-3a.png" alt="NovaTopUp Logo" class="h-9 w-auto drop-shadow" />
+        <div class="text-2xl font-extrabold tracking-tight"><span class="text-white">Nova</span><span class="text-gradient">TopUp</span></div>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#/" class="nav-link">Home</a>
+        <a href="#/history" class="nav-link">Recharge History</a>
+        <a href="#/about" class="nav-link">About</a>
+        <a href="#/contact" class="nav-link">Contact</a>
+        <a href="#/terms" class="nav-link">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main App -->
+  <main id="app" class="container mx-auto px-4 py-8"></main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 mt-16">
+    <div class="container mx-auto px-4 py-10 grid md:grid-cols-4 gap-8 text-sm">
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <img src="images/codashop-logo-new-3a.png" class="h-6 w-auto" alt="logo">
+          <span class="font-bold">NovaTopUp</span>
+        </div>
+        <p class="text-slate-400">Fast, secure top-ups for your favorite games. Pay in SGD with trusted methods.</p>
+      </div>
+      <div>
+        <h4 class="footer-title">Company</h4>
+        <ul class="space-y-2">
+          <li><a href="#/about" class="footer-link">About</a></li>
+          <li><a href="#/contact" class="footer-link">Contact</a></li>
+          <li><a href="#/terms" class="footer-link">Terms</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Support</h4>
+        <ul class="space-y-2">
+          <li><a href="#/help" class="footer-link">Help Center</a></li>
+          <li><a href="#/payment" class="footer-link">Payment Methods</a></li>
+          <li><a href="#/history" class="footer-link">Order History</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Legal</h4>
+        <ul class="space-y-2">
+          <li><a href="#/privacy" class="footer-link">Privacy Policy</a></li>
+          <li><a href="#/cookie" class="footer-link">Cookie Policy</a></li>
+          <li><a href="#/refunds" class="footer-link">Refund Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center text-xs text-slate-500 pb-8">© <span id="year"></span> NovaTopUp. All rights reserved.</div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
